@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,73 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="isItPrime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is it Prime?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQR-Vg-3Ws">
+                                <rect key="frame" x="133" y="55" width="108" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please, insert a number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fs-JC-uZT">
+                                <rect key="frame" x="97" y="145" width="180" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zf-xp-eBg">
+                                <rect key="frame" x="87" y="307" width="200" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="g0P-hK-wZq"/>
+                                    <constraint firstAttribute="width" constant="200" id="n1T-GC-blE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qXP-uV-LBN">
+                                <rect key="frame" x="112.5" y="187" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Ofm-sZ-72O"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXB-En-kC8">
+                                <rect key="frame" x="163" y="231" width="49" height="30"/>
+                                <state key="normal" title="Check!"/>
+                                <connections>
+                                    <action selector="primeCheck:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UAt-rn-Dde"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SQR-Vg-3Ws" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2tT-1h-AMT"/>
+                            <constraint firstItem="SQR-Vg-3Ws" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="B7F-FC-c8j"/>
+                            <constraint firstItem="5fs-JC-uZT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H51-32-Bt3"/>
+                            <constraint firstItem="qXP-uV-LBN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J2J-ZR-MSr"/>
+                            <constraint firstItem="qXP-uV-LBN" firstAttribute="top" secondItem="5fs-JC-uZT" secondAttribute="bottom" constant="21" id="P6X-5A-UVh"/>
+                            <constraint firstItem="1zf-xp-eBg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d38-gg-ntD"/>
+                            <constraint firstItem="5fs-JC-uZT" firstAttribute="top" secondItem="SQR-Vg-3Ws" secondAttribute="bottom" constant="62" id="diW-5Q-j7e"/>
+                            <constraint firstItem="1zf-xp-eBg" firstAttribute="top" secondItem="hXB-En-kC8" secondAttribute="bottom" constant="46" id="iWE-fp-C7d"/>
+                            <constraint firstItem="hXB-En-kC8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oNz-px-lLE"/>
+                            <constraint firstItem="hXB-En-kC8" firstAttribute="top" secondItem="5fs-JC-uZT" secondAttribute="bottom" constant="65" id="uhu-jD-iUU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="lblResult" destination="1zf-xp-eBg" id="poA-TO-cgR"/>
+                        <outlet property="txtNumber" destination="qXP-uV-LBN" id="ooj-bG-Mqz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>
